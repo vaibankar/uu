@@ -2,8 +2,8 @@ variable "ami" {
   type = map
 
   default = {
-    "eu-north-1" = "ami-0fd303abd14827300"
-    "eu-north-1" = "ami-06410fb0e71718398"
+    "us-east-1" = "ami-0574da719dca65348"
+    "us-east-1" = "ami-0a6b2839d44d781b2"
   }
 }
 
@@ -12,9 +12,9 @@ variable "instance_count" {
 }
 
 variable "instance_type" {
-  default = "t3.micro"
+  default = "t2.micro"
 }
 
 variable "aws_region" {
-  default = "eu-north-1"
+  default = "us-east-1"
 }

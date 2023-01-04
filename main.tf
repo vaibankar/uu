@@ -1,6 +1,6 @@
 provider "aws" {
   profile = "uu"
-  region = "eu-north-1"
+  region = "us-east-1"
 }
 
 resource "aws_instance" "my-instance" {
