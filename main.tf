@@ -1,5 +1,5 @@
 provider "aws" {
-  profile = "terraform-session"
+  profile = "uu"
   region = "eu-north-1"
 }
 
