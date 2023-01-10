@@ -4,5 +4,5 @@ provider "aws" {
 }
 resource "aws_iam_user" "rs1" {
   count = length(var.user)
-  name = var.user.count.uname[1]
+  name = var.user.count.name[1]
 }
