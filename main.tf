@@ -14,7 +14,7 @@ resource "aws_instance" "my-instance" {
 }
 resource "aws_security_group" "sec_group" {
   name   = "sec_group"
-  vpc_id = "vpc-0c9b17c90202b1fb4"
+  vpc_id = "vpc-pkhacker123"
 }
 resource "aws_security_group" "http" {
   name        = "sg"
