@@ -36,8 +36,3 @@ resource "aws_security_group" "ssh" {
     cidr_blocks = ["0.0.0.0/0"]
 }
 }
-
-resource "aws_network_interface_sg_attachment" "sg_attachment" {
-  security_group_id    = "${data.aws_security_group.sec_group.id}"
-  network_interface_id = "${aws_instance.web.primary_network_interface_id}"
-}
