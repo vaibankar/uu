@@ -16,3 +16,12 @@ resource "aws_iam_user" "rs3" {
 resource "aws_iam_user" "rs4" {
   name = var.u4
 }
+resource "aws_iam_group" "group" {
+  name = "devops"
+  
+}
+resource "aws_iam_group_membership" "grup_mem" {
+  users = [aws_iam_user.rs1.name,aws_iam_user.rs2.name,aws_iam_user.rs3.name,aws_iam_user.rs4.name]
+  group = [aws_iam_group.group.name]
+  
+}
