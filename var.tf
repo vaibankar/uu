@@ -14,7 +14,7 @@ variable "u4" {
   type=string
   default = "userfour"
 }
-variable "group" {
+variable "u5" {
   type = string
   default = "devops"
   
