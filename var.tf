@@ -14,3 +14,8 @@ variable "u4" {
   type=string
   default = "userfour"
 }
+variable "group" {
+  type = string
+  default = "devops"
+  
+}
