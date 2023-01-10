@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "my-instance" {
-  ami           = (var.ami,var.aws_region)
+  ami           = lookup(var.ami,var.aws_region)
   instance_type = var.instance_type
 
   tags = {
