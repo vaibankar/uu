@@ -6,13 +6,13 @@ resource "aws_iam_user" "rs1" {
   name = var.userone
 }
 resource "aws_iam_user" "rs2" {
-  name = var.usertwo
+  name = var.u2
   
 }
 resource "aws_iam_user" "rs3" {
-  name = var.userthree
+  name = var.u3
   
 }
 resource "aws_iam_user" "rs4" {
-  name = var.userfour
+  name = var.u4
 }
