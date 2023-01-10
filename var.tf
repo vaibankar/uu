@@ -1,21 +1,15 @@
-variable "userone" {
-  type= string
-  default = "userone"
+variable "ami" {
+  type = map
+
+  default = {
+    "us-east-1" = "ami-06878d265978313ca"
+  }
 }
-variable "u2" {
-  type=string
-  default = "usertwo"
+
+variable "instance_type" {
+  default = "t2.micro"
 }
-variable "u3" {
-  type=string
-  default = "userthree"
-}
-variable "u4" {
-  type=string
-  default = "userfour"
-}
-variable "u5" {
-  type = string
-  default = "devops"
-  
+
+variable "aws_region" {
+  default = "us-east-1"
 }
