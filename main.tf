@@ -16,7 +16,7 @@ resource "aws_security_group" "sec_group" {
   name   = "sec_group"
   vpc_id = "vpc-0c9b17c90202b1fb4"
 }
-resource "aws_security_group" "http" {
+resource "aws_security_group" "sg" {
   name        = "sg"
   description = "Web Security Group for HTTP"
   ingress {
@@ -26,7 +26,7 @@ resource "aws_security_group" "http" {
     cidr_blocks = ["0.0.0.0/0"]
 }
 }
-resource "aws_security_group" "ssh" {
+resource "aws_security_group" "sg1" {
   name        = "sg1"
   description = "Web Security Group for ssh"
   ingress {
