@@ -1,8 +1,8 @@
 provider "aws" {
   profile = "uu"
   region = "us-east-1"
-  data "aws_region" "current" {}
-  data "aws_availability_zones" "available" {}
+data "aws_region" "current" {}
+data "aws_availability_zones" "available" {}
 }
 # Crate a AWS VPC which contains the following
 #   - VPC
