@@ -16,7 +16,7 @@ resource "aws_security_group" "sec_group" {
   name   = "sec_group"
   vpc_id = "vpc-0c9b17c90202b1fb4"
 }
-resource "aws_security_group" "sg" {
+resource "aws_security_group" "http" {
   name        = "sg"
   description = "Web Security Group for HTTP"
   ingress {
@@ -26,7 +26,7 @@ resource "aws_security_group" "sg" {
     cidr_blocks = ["0.0.0.0/0"]
 }
 }
-resource "aws_security_group" "sg1" {
+resource "aws_security_group" "ssh" {
   name        = "sg1"
   description = "Web Security Group for ssh"
   ingress {
@@ -37,6 +37,6 @@ resource "aws_security_group" "sg1" {
 }
 }
 resource "aws_network_interface_sg_attachment" "sg_attachment" {
-  security_group_id    = aws_security_group.sg.id
+  security_group_id    = aws_security_group.http.ssh.id
   network_interface_id = aws_instance.my-instance.primary_network_interface_id
 }
