@@ -1,15 +1,11 @@
-variable "ami" {
-  type = map
-
-  default = {
-    "us-east-1" = "ami-06878d265978313ca"
-  }
+variable "public_subnet_cidrs" {
+ type        = list(string)
+ description = "Public Subnet CIDR values"
+ default     = ["10.0.16.0/20"]
 }
-
-variable "instance_type" {
-  default = "t2.micro"
-}
-
-variable "aws_region" {
-  default = "us-east-1"
+ 
+variable "private_subnet_cidrs" {
+ type        = list(string)
+ description = "Private Subnet CIDR values"
+ default     = ["10.0.32.0/20"]
 }
