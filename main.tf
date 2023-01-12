@@ -78,13 +78,3 @@ resource "aws_route_table_association" "testapp-custom-rtb-public-subnet" {
   subnet_id      = aws_subnet.testapp_public_subnet.*.id[count.index]
 }
 
-# Creating a New Key
-resource "aws_key_pair" "Key-Pair" {
-
-  # Name of the Key
-  key_name   = "newkey"
-
-  # Adding the SSH authorized key !
-  public_key = file("/.ssh/authorized_keys")
-  
- }
