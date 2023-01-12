@@ -1,23 +1,23 @@
-resource "aws_iam_role" "test_role" {
-  name = "test_role"
+#resource "aws_iam_role" "test_role" {
+ # name = "test_role"
 
-  assume_role_policy = <<EOF
+  #assume_role_policy = <<EOF
 {
-  "Version": "2012-10-17",
-  "Statement": [
+  #"Version": "2012-10-17",
+  #"Statement": [
     {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "ec2.amazonaws.com"
+      #"Action": "sts:AssumeRole",
+      #"Principal": {
+       # "Service": "ec2.amazonaws.com"
       },
-      "Effect": "Allow",
-      "Sid": ""
+      #"Effect": "Allow",
+      #"Sid": ""
     }
   ]
 }
-EOF
+#EOF
 
-  tags = {
-      tag-key = "tag-value"
+  #tags = {
+   #   tag-key = "tag-value"
   }
 }
