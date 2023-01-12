@@ -85,6 +85,6 @@ resource "aws_key_pair" "Key-Pair" {
   key_name   = "newkey"
 
   # Adding the SSH authorized key !
-  public_key = file("~/.ssh/authorized_keys")
+  public_key = file("/.ssh/authorized_keys")
   
  }
